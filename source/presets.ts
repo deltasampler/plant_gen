@@ -1,7 +1,6 @@
-import {CHANGER_TYPE} from "@cl/lsys";
-import {vec2_t, vec4_t} from "@cl/type";
-import {vec2} from "@cl/vec2.ts";
-import {vec4} from "@cl/vec4.ts";
+import {CHANGER_TYPE} from "@cl/lsys.ts";
+import {vec2, vec2_t} from "@cl/math/vec2.ts";
+import {vec4, vec4_t} from "@cl/math/vec4.ts";
 
 export enum LEAF_TYPE {
     BOX,
@@ -9,28 +8,28 @@ export enum LEAF_TYPE {
 };
 
 export type preset_t = {
-    name: string,
-    position: vec2_t,
-    width: number,
-    length: number,
-    angle: number,
-    delta_angle: number,
-    input: string,
-    rules: {[key: string]: string},
-    iter: number,
-    branch_color: vec4_t
-    leaf_color: vec4_t,
-    flower_inner_color: vec4_t,
-    flower_outer_color: vec4_t,
-    leaf_type: LEAF_TYPE,
-    leaf_size: vec2_t,
-    leaf_ratio: 0.5,
-    flower_inner_radius: number,
-    flower_outer_radius: number,
-    width_changer_type: CHANGER_TYPE,
-    width_changer_param: number,
-    length_changer_type: CHANGER_TYPE,
-    length_changer_param: number,
+    name: string;
+    position: vec2_t;
+    width: number;
+    length: number;
+    angle: number;
+    delta_angle: number;
+    input: string;
+    rules: {[key: string]: string};
+    iter: number;
+    branch_color: vec4_t;
+    leaf_color: vec4_t;
+    flower_inner_color: vec4_t;
+    flower_outer_color: vec4_t;
+    leaf_type: LEAF_TYPE;
+    leaf_size: vec2_t;
+    leaf_ratio: 0.5;
+    flower_inner_radius: number;
+    flower_outer_radius: number;
+    width_changer_type: CHANGER_TYPE;
+    width_changer_param: number;
+    length_changer_type: CHANGER_TYPE;
+    length_changer_param: number;
 };
 
 export const PRESETS: preset_t[] = [
