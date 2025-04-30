@@ -1,7 +1,7 @@
 import {gl_init, gl_link_program} from "@engine/gl.ts";
 import {cam2_compute_proj, cam2_compute_view, cam2_move_right, cam2_move_up, cam2_new} from "@cl/camera/cam2.ts";
 import {io_init, io_key_down} from "@engine/io.ts";
-import {vec2, vec2_addmuls1, vec2_copy, vec2_dir1, vec2_t} from "@cl/math/vec2";
+import {vec2, vec2n_addmuls, vec2_copy, vec2n_dir, vec2_t} from "@cl/math/vec2";
 import {lsys_add_callback, lsys_add_rule, lsys_gen, lsys_new} from "@cl/lsys.ts";
 import {vec4, vec4_copy} from "@cl/math/vec4.ts";
 import {COLOR_MODE, UT, group_t, gs_object, gui_button, gui_canvas, gui_collapsing_header, gui_color_edit, gui_group, gui_input_number, gui_input_text, gui_input_vec, gui_reload_component, gui_render, gui_select, gui_slider_number, gui_text, gui_update, gui_window, gui_window_grid, gui_window_layout, unit} from "@gui/gui.ts";
@@ -95,7 +95,7 @@ lsys_add_callback(lsys, "L", function(start: vec2_t, w0: number, end: vec2_t, w1
     if (config.leaf_type === LEAF_TYPE.BOX) {
         gen_obb(start, config.leaf_size, Math.random(), -0.2, config.leaf_color, poly_data);
     } else {
-        gen_line_kite(start, vec2_addmuls1(start, vec2_dir1(end, start), config.leaf_size[1]), config.leaf_size[0], config.leaf_ratio, -0.2, config.leaf_color, poly_data);
+        gen_line_kite(start, vec2n_addmuls(start, vec2n_dir(end, start), config.leaf_size[1]), config.leaf_size[0], config.leaf_ratio, -0.2, config.leaf_color, poly_data);
     }
 });
 
