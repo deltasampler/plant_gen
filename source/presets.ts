@@ -1,4 +1,4 @@
-import {CHANGER_TYPE} from "@cl/lsys.ts";
+import {CHANGER_TYPE} from "./lsys.ts";
 import {vec2, vec2_t} from "@cl/math/vec2.ts";
 import {vec4, vec4_t} from "@cl/math/vec4.ts";
 

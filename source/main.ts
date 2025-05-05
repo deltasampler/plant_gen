@@ -2,11 +2,11 @@ import {gl_init, gl_link_program} from "@engine/gl.ts";
 import {cam2_compute_proj, cam2_compute_view, cam2_move_right, cam2_move_up, cam2_new} from "@cl/camera/cam2.ts";
 import {io_init, io_key_down} from "@engine/io.ts";
 import {vec2, vec2n_addmuls, vec2_copy, vec2n_dir, vec2_t} from "@cl/math/vec2";
-import {lsys_add_callback, lsys_add_rule, lsys_gen, lsys_new} from "@cl/lsys.ts";
+import {lsys_add_callback, lsys_add_rule, lsys_gen, lsys_new} from "./lsys.ts";
 import {vec4, vec4_copy} from "@cl/math/vec4.ts";
 import {COLOR_MODE, UT, group_t, gs_object, gui_button, gui_canvas, gui_collapsing_header, gui_color_edit, gui_group, gui_input_number, gui_input_text, gui_input_vec, gui_reload_component, gui_render, gui_select, gui_slider_number, gui_text, gui_update, gui_window, gui_window_grid, gui_window_layout, unit} from "@gui/gui.ts";
 import {LEAF_TYPE, PRESETS} from "./presets.ts";
-import {gen_circle, gen_line, gen_line_kite, gen_obb, gen_star, poly_data_t} from "@cl/triangulation2.ts";
+import {gen_circle, gen_line, gen_line_kite, gen_obb, gen_star, poly_data_t} from "@cl/geometry/triangulation2.ts";
 
 const canvas_el = document.createElement("canvas");
 const gl = gl_init(canvas_el);
